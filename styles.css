@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400&display=swap');
+
+.header{
+    height: 8vh;
+    background-color: bisque;
+}
+
+a:link {
+    text-decoration: none; 
+    color:gray;
+    font-size: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+a:visited {
+    text-decoration: none; 
+    color:gray;
+    font-size: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+a:hover {
+    text-decoration: none; 
+    color:gray;
+    font-size: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+a:active {
+    text-decoration: none; 
+    color:gray;
+    font-size: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+}

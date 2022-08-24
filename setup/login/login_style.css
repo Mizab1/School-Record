@@ -1,0 +1,40 @@
+.form{
+    background-color: #bfc8d1;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: 18vh auto;
+    padding: 10vh 2vh;
+}
+
+.nav-form{
+    display: block;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: bisque;
+    width: 100%;
+}
+  
+.topnav {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav .search-container .search-btn {
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header{
+    height: 8vh;
+    background-color: bisque;
+}
