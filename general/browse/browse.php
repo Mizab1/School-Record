@@ -25,7 +25,7 @@
     <div class="topnav">
         <div class="search-container">
             <form action="browse.php" method="post">
-            <a href="../../homepage.php" class="btn btn-secondary" style="float: left;">Home</a>
+                <a href="../../homepage.php" class="btn btn-secondary" style="float: left;">Home</a>
                 <input type="text" placeholder="Search.." name="search_keyword">
                 <button type="submit" class="search-btn btn-secondary btn" name="search_btn">Search</button>
             </form>

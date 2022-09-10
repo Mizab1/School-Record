@@ -45,22 +45,22 @@
             <tr>
                 <td><a href="general/browse/browse.php">Browse</a></th>
                 <td><a href="fees/fees_record/main_page.php">Fees Record</a></td>
-                <td><a href="setup/login/login_page.php">Login</a></td>
+                <td><a href="setup/logout.php">Logout</a></td>
             </tr>
             <tr>
                 <td><a href="general/add/check_rollno.php">Add</a></th>
                 <td><a href="fees/dues/selection_page.php">Dues</a></td>
-                <td><a href="setup/logout.php">Logout</a></td>
+                <td><a href="setup/signup/signup_page.php">Sign Up</a></td>
             </tr>
             <tr>
                 <td><a href="general/edit/selection_page.php">Edit</a></th>
                 <td><a href="fees/credit/selection_page.php">Payment</a></td>
-                <td><a href="setup/signup/signup_page.php">Sign Up</a></td>
+                <td><a href="setup/user_details/main_page.php">User's Details</a></td>
             </tr>
             <tr>
                 <td><a href="general/delete/delete_page.php">Delete</a></th>
                 <td></td>
-                <td><a href="setup/user_details/main_page.php">User's Details</a></td>
+                <td></td>
             </tr>
             <tr>
                 <td><a href="general/disable/disable_list.php">Disable</a></th>
