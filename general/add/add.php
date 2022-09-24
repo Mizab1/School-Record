@@ -39,7 +39,7 @@
                     <table class="table table-bordered text-center">
                         <tr>
                             <th>Roll No.</th>
-                            <td><input type="number" class="form-control" placeholder="Enter Roll no." name="roll_no" required></td>
+                            <td><input type="number" class="form-control" placeholder="Enter Roll no." name="roll_no" value="<?php echo $_GET["roll_no"]?>" required></td>
                         </tr>
                         <tr>
                             <th>First Name</th>
