@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2022 at 07:00 PM
+-- Generation Time: Sep 24, 2022 at 07:45 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -49,7 +49,8 @@ CREATE TABLE `disable_table` (
 --
 
 INSERT INTO `disable_table` (`id`, `roll_no`, `first_name`, `middle_name`, `surname`, `age`, `email`, `branch`, `year`, `address`, `state`, `pincode`, `phone_no`, `parent_phone_no`) VALUES
-(3, 3, 'Mayuresh', 'Suresh', 'Gaikwad', 19, 'maus@gmail.com', 'Computer Engineering', 'TY', 'Mumbra', 'Maharastra', 40612, 2147483647, 2147483647);
+(3, 3, 'Mayuresh', 'Suresh', 'Gaikwad', 19, 'maus@gmail.com', 'Computer Engineering', 'TY', 'Mumbra', 'Maharastra', 40612, 2147483647, 2147483647),
+(14, 12, 'Araf', 'Ashfaque', 'Ansari', 19, 'araf@gmail.com', 'Chemical Engineering', 'TY', 'Thane', 'Maharastra', 421302, 2147483647, 2147483647);
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,16 @@ INSERT INTO `fee_records` (`uid`, `id`, `today_date`, `narration`, `debit`, `cre
 (13, 2, '2022-08-24', 'Basic Fees', 6000, 0),
 (14, 10, '2022-08-24', 'Basic Fees', 6000, 0),
 (15, 11, '2022-08-24', 'Basic Fees', 6000, 0),
-(16, 12, '2022-08-24', 'Basic Fees', 6000, 0);
+(16, 12, '2022-08-24', 'Basic Fees', 6000, 0),
+(17, 13, '2022-08-25', 'Basic Fees', 6000, 0),
+(18, 13, '2022-08-25', 'Late submission of Book', 1000, 0),
+(19, 13, '2022-08-25', 'Last Semester Fees', 0, 5000),
+(20, 14, '2022-09-10', 'Basic Fees', 6000, 0),
+(21, 14, '2022-09-10', 'Final Year fee', 60000, 0),
+(22, 14, '2022-09-10', 'Final year fee 1/2', 0, 30000),
+(23, 15, '2022-09-24', 'Basic Fees', 6000, 0),
+(24, 15, '2022-09-24', '3rd Sem fees', 45000, 0),
+(25, 15, '2022-09-24', 'Paid 3rd sem fees', 0, 30000);
 
 -- --------------------------------------------------------
 
@@ -107,8 +117,7 @@ CREATE TABLE `login_details` (
 --
 
 INSERT INTO `login_details` (`id`, `login_email`, `login_username`, `login_password`, `img`) VALUES
-(4, 'mizab@gmail.com', 'Mizab', 'mizab123', '../../img/63061488e05aa63061488e05ac.png'),
-(5, 'rk@gmail.com', 'Rizwan', 'rk123', '../../img/6306249852800630624985280d.png');
+(6, 'mizab@gmail.com', 'Mizab', 'mizab123', '../../img/6307ab177b6c86307ab177b6ca.png');
 
 -- --------------------------------------------------------
 
@@ -141,7 +150,9 @@ INSERT INTO `student_details` (`id`, `roll_no`, `first_name`, `middle_name`, `su
 (2, 1, 'Mizab', 'Mansoor', 'Ansari', '19', 'mizab@gmail.com', 'Computer Engineering', 'TY', 'Diva', 'Maharastra', 400612, 2147483647, 2147483647),
 (6, 4, 'Khurshid', 'Abdul', 'Khan', '19', 'rk@gmail.com', 'Computer Engineering', 'TY', 'Mumbra', 'Maharastra', 400511, 2147483647, 2147483647),
 (11, 10, 'Mayuresh', 'Suresh', 'Gaikwad', '19', 'maus@gmail.com', 'Computer Engineering', 'TY', 'Mumbra', 'Maharastra', 400612, 9876876857, 9877567856),
-(12, 3, 'Advaitya', 'Ramesh', 'Jadav', '18', 'ad@gmail.com', 'Computer Engineering', 'TY', 'Kalwa', 'Maharastra', 469123, 9867458745, 9876896787);
+(12, 3, 'Advaitya', 'Ramesh', 'Jadav', '18', 'ad@gmail.com', 'Computer Engineering', 'TY', 'Kalwa', 'Maharastra', 469123, 9867458745, 9876896787),
+(13, 19, 'Abdul Rehmaan', 'Khalid', 'Azmi', '19', 'maaz@gmail.com', 'Computer Engineering', 'TY', 'Thane', 'Maharastra', 400644, 2147483647, 2147483647),
+(15, 5, 'Arfat', 'Mushtak', 'Ansari', '18', 'arfat@gmail.com', 'Computer Engineering', 'SY', 'Mumbra', 'Maharastra', 400612, 2147483647, 2147483647);
 
 --
 -- Indexes for dumped tables
@@ -179,25 +190,25 @@ ALTER TABLE `student_details`
 -- AUTO_INCREMENT for table `disable_table`
 --
 ALTER TABLE `disable_table`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `fee_records`
 --
 ALTER TABLE `fee_records`
-  MODIFY `uid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `uid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `login_details`
 --
 ALTER TABLE `login_details`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `student_details`
 --
 ALTER TABLE `student_details`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
