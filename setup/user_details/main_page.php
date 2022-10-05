@@ -55,8 +55,8 @@
                     <th>Image</th>
                     <th>ID</th>
                     <th>Email</th>
-                    <th>Username</th>
-                    <th>Password</th>
+                    <!-- <th>Username</th>
+                    <th>Password</th> -->
                 </tr>
             </thead>
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
@@ -64,8 +64,8 @@
                     <td><img src="<?php echo $row["img"]; ?>"></td>
                     <td><?php echo $row["id"]; ?></td>
                     <td><?php echo $row["login_email"]; ?></td>
-                    <td><?php echo $row["login_username"]; ?></td>
-                    <td><?php echo $row["login_password"]; ?></td>
+                    <!-- <td><?php echo $row["login_username"]; ?></td>
+                    <td><?php echo $row["login_password"]; ?></td> -->
                 </tr>
             <?php endwhile; ?>
         </table>

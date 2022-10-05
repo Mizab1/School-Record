@@ -18,6 +18,36 @@
         ?>
     </div>
     <?php endif; ?>
+
+<?php
+    if(isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["password"])){
+        $email = $_POST["email"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $hash_password = password_hash($password, PASSWORD_DEFAULT);
+        
+            $uniq_filename = uniqid() . uniqid();
+            $location = "../../img/" . $uniq_filename . ".png";
+        
+            
+            mysqli_query($conn, "INSERT INTO login_details (login_email, login_username, login_password, img) VALUES ('$email', '$username', '$hash_password', '$location')");
+            move_uploaded_file($_FILES["image"]["tmp_name"], $location);
+        
+            $_SESSION["username"] = $_POST["username"];
+            $_SESSION["password"] = $_POST["password"];
+            $_SESSION["logged"] = true;
+        
+            $_SESSION["msg"] = "Signup Successful";
+            $_SESSION["msg_type"] = "success";
+            header("location: ../../homepage.php");
+        }else{
+            $err_msg = "Email is invalid";
+        }
+    }
+
+?>
+
     <!-- <div class="topnav">
         <div class="search-container">
             <form action="signup_page.php" method="post">
@@ -39,22 +69,23 @@
             <label style="font-family: 'Lexend Deca'; font-size:50px; color:white;">User Signup</label>
         </div>
         <div class="row justify-content-center">
-            <form action="signup_process.php" method="post" enctype="multipart/form-data">
+            <form action="signup_page.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" class="form-control" placeholder="Enter Your Email" required>
+                    <input type="text" name="email" class="form-control" placeholder="Enter Your Email" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ""; ?>" required>
+                    <h5 class="text-center danger" style="color:#DD5353"><?php echo isset($err_msg) ? $err_msg : ""; ?></h5>
                 </div>
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" name="username" class="form-control" placeholder="Enter Your Username" required>
+                    <input type="text" name="username" class="form-control" placeholder="Enter Your Username" value="<?php echo isset($_POST["username"]) ? $_POST["username"] : ""; ?>" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Enter Your Password" required>
+                    <input type="password" name="password" class="form-control" placeholder="Enter Your Password" value="<?php echo isset($_POST["password"]) ? $_POST["password"] : ""; ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="formFile" class="form-label">Insert Your Image</label>
-                    <input class="form-control" type="file" name="image">
+                    <input class="form-control" type="file" name="image" required>
                 </div>
                 <div class="form-group text-center">
                     <button type="submit" class="btn btn-primary" name="signup">Signup</button>

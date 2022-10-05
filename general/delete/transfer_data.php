@@ -10,5 +10,5 @@
 
     $_SESSION["msg"] = "Details has been deleted successfully";
     $_SESSION["msg_type"] = "danger";
-    header("location: delete_page.php");
+    header("location: ../browse/browse.php");
 ?>

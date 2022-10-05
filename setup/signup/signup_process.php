@@ -3,12 +3,14 @@
     $email = $_POST["email"];
     $username = $_POST["username"];
     $password = $_POST["password"];
+    
+    $hash_password = password_hash($password, PASSWORD_DEFAULT)
 
     $uniq_filename = uniqid() . uniqid();
     $location = "../../img/" . $uniq_filename . ".png";
 
     
-    mysqli_query($conn, "INSERT INTO login_details (login_email, login_username, login_password, img) VALUES ('$email', '$username', '$password', '$location')");
+    mysqli_query($conn, "INSERT INTO login_details (login_email, login_username, login_password, img) VALUES ('$email', '$username', '$hash_password', '$location')");
     move_uploaded_file($_FILES["image"]["tmp_name"], $location);
 
     $_SESSION["username"] = $_POST["username"];

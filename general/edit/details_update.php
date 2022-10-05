@@ -24,5 +24,5 @@
 
     $_SESSION["msg"] = "Details has been updated successfully";
     $_SESSION["msg_type"] = "success";
-    header("location: selection_page.php");
+    header("location: ../browse/browse.php");
 ?>

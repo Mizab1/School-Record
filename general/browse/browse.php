@@ -50,15 +50,21 @@
                     <th>Last Name</th>
                     <th>Age</th>
                     <th>Email</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                 <tr>
-                    <td><a href="<?php echo "more_details.php?id=".$row["id"]; ?>"><?php echo $row["roll_no"]; ?></a></td>
+                    <td><?php echo $row["roll_no"]; ?></td>
                     <td><?php echo $row["first_name"]; ?></td>
                     <td><?php echo $row["surname"]; ?></td>
                     <td><?php echo $row["age"]; ?></td>
                     <td><?php echo $row["email"]; ?></td>
+                    <td>
+                        <a href="<?php echo "more_details.php?id=".$row["id"]; ?>" class="btn btn-primary">View</a>
+                        <a href="<?php echo "../edit/edit_page.php?id=".$row["id"]; ?>" class="btn btn-secondary">Edit</a>
+                        <a href="<?php echo "../delete/transfer_data.php?id=".$row["id"]; ?>" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
             <?php endwhile; ?>
         </table>
